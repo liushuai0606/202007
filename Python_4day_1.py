@@ -32,8 +32,10 @@ ping_resul  = os.popen('ping '+ gateway + ' -c 1').read()
 
 re_ping = re.findall(r'1 received', ping_resul)
 
+print("   ")
+print('我们假设网关IP地址为最后一位为1，因此网关IP地址为：192.168.1.1',end="\n\n")
+
 if re_ping:
     print('网关可达！')
 else:
     print('网关不可达！')
-print('-'*60)
